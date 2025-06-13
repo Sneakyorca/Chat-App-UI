@@ -5,3 +5,92 @@
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
+.contact-list img,
+.info img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  background-color: #eef;
+  padding: 0;
+  color: #333;
+}
+
+/* Contact list section */
+
+.messages {
+  padding-right: 30px;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+}
+.messages h1 {
+  margin-bottom: 20px;
+}
+.search {
+  position: relative;
+  margin-bottom: 40px;
+}
+.search input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: #f6f6f6;
+}
+.search img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.contact-list > div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.contact-list p {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.img {
+  position: relative;
+}
+.img span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  bottom: 0;
+  right: 9px;
+}
+#two span {
+  background-color: gray;
+}
+#four span {
+  background-color: red;
+}
+
+/* chat messages section */
+
+aside {
+  background: #dde;
+  min-height: 100vh;
+}
+aside .info {
+  background-color: #f6f6f6;
+  padding: 30px;
+}
+aside .messages {
+  backdrop-filter: blur(10px);
+}
