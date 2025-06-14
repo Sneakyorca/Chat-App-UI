@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
+
 .contact-list img,
 .info img {
   width: 50px;
@@ -12,10 +14,11 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
 body {
   display: grid;
   grid-template-columns: 1.5fr 2.5fr;
-  background-color: #eef;
+  background: linear-gradient(145deg, rgba(128, 0, 128, 0.2), rgba(0, 0, 255, 0.2));
   padding: 0;
   overflow-y: hidden;
   color: #333;
@@ -25,16 +28,20 @@ body {
 
 .messages {
   padding-right: 30px;
-  backdrop-filter: blur(10px);
   padding: 40px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.05);
 }
+
 .messages h1 {
   margin-bottom: 20px;
 }
+
 .search {
   position: relative;
   margin-bottom: 40px;
 }
+
 .search input {
   font-size: 16px;
   width: 100%;
@@ -45,11 +52,13 @@ body {
   border: none;
   background: #f6f6f6;
 }
+
 .search img {
   position: absolute;
   top: 15px;
   left: 15px;
 }
+
 .contact-list > div {
   margin-bottom: 20px;
   display: flex;
@@ -58,13 +67,16 @@ body {
   gap: 10px;
   cursor: pointer;
 }
+
 .contact-list p {
   font-size: 0.8em;
   margin-top: 5px;
 }
+
 .img {
   position: relative;
 }
+
 .img span {
   display: inline-block;
   width: 12px;
@@ -76,9 +88,11 @@ body {
   bottom: 0;
   right: 9px;
 }
+
 #two span {
   background-color: gray;
 }
+
 #four span {
   background-color: red;
 }
@@ -86,8 +100,10 @@ body {
 /* chat messages section */
 
 aside {
-  background: #ececfc;
+  background: rgba(236, 236, 252, 0.95);
+  backdrop-filter: blur(4px);
 }
+
 aside header {
   background-color: #f6f6f6b0;
   padding: 30px;
@@ -95,11 +111,13 @@ aside header {
   justify-content: space-between;
   align-items: center;
 }
+
 aside .info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .more span {
   display: inline-block;
   background-color: black;
@@ -108,27 +126,34 @@ aside .info {
   margin: 1px;
   border-radius: 50%;
 }
+
 aside .messages {
   padding: 30px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   gap: 20px;
   height: 70vh;
+  overflow-y: auto;
 }
+
 .info p {
   font-size: 0.8em;
   margin-top: 5px;
 }
+
 aside .messages div:nth-child(even),
 aside .messages div:nth-child(7),
 aside .messages div:nth-child(9) {
   align-self: flex-end;
 }
+
 aside .messages div:nth-child(6),
 aside .messages div:nth-child(8) {
   align-self: flex-start;
 }
+
 aside .messages div:nth-child(even),
 aside .messages div:nth-child(7),
 aside .messages div:nth-child(9) {
@@ -140,15 +165,18 @@ aside .messages div:nth-child(9) {
   color: white;
   border-radius: 15px 15px 0 15px;
 }
+
 aside .messages div:nth-child(even) .time,
 aside .messages div:nth-child(7) .time,
 aside .messages div:nth-child(9) .time {
   color: white;
 }
+
 aside .messages div:nth-child(6) .time,
 aside .messages div:nth-child(8) .time {
   color: #555;
 }
+
 aside .messages div,
 aside .messages div:nth-child(6),
 aside .messages div:nth-child(8) {
@@ -157,20 +185,21 @@ aside .messages div:nth-child(8) {
   background: white;
   color: #333;
 }
+
 aside .messages div {
   width: fit-content;
   max-width: 60%;
 }
+
 aside .messages div p:first-child {
   margin-bottom: 10px;
 }
+
 .time {
   font-size: 0.8em;
   color: #555;
 }
-aside .messages {
-  overflow-y: auto;
-}
+
 aside .type {
   width: 100%;
   padding: 20px;
@@ -181,6 +210,7 @@ aside .type {
   gap: 10px;
   justify-content: space-between;
 }
+
 .type input {
   color: white;
   padding: 10px;
@@ -189,13 +219,16 @@ aside .type {
   border: none;
   outline: none;
 }
+
 .type img:first-child {
   transform: rotateZ(45deg);
 }
+
 .type img:last-child {
   filter: brightness(0) invert(1);
   transform: rotateZ(0);
 }
+
 .type div {
   padding: 10px;
   background: linear-gradient(
@@ -207,4 +240,4 @@ aside .type {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
+  }
