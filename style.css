@@ -15,7 +15,11 @@
 body {
   display: grid;
   grid-template-columns: 1.5fr 2.5fr;
-  background-color: #eef;
+  background: linear-gradient(
+    to top left,
+    rgba(128, 0, 128) 60%,
+    rgba(0, 0, 255) 100%
+  );
   padding: 0;
   overflow-y: hidden;
   color: #333;
@@ -23,9 +27,10 @@ body {
 
 /* Contact list section */
 
-.messages {
+section.messages {
   padding-right: 30px;
   backdrop-filter: blur(10px);
+  background: #ffffffd7;
   padding: 40px;
 }
 .messages h1 {
@@ -86,10 +91,11 @@ body {
 /* chat messages section */
 
 aside {
-  background: #ececfc;
+  backdrop-filter: blur(10px);
+  background-color: #ffffffa5;
 }
 aside header {
-  background-color: #f6f6f6b0;
+  background-color: #eeeeeeee;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -110,7 +116,6 @@ aside .info {
 }
 aside .messages {
   padding: 30px;
-  backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -176,13 +181,13 @@ aside .type {
   padding: 20px;
   position: relative;
   bottom: 10px;
-  background-color: #eee;
+  background-color: #eeeeee80;
   display: flex;
   gap: 10px;
   justify-content: space-between;
 }
 .type input {
-  color: white;
+  color: #333;
   padding: 10px;
   border-radius: 35px;
   width: 100%;
