@@ -14,9 +14,10 @@
 }
 body {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1.5fr 2.5fr;
   background-color: #eef;
   padding: 0;
+  overflow-y: hidden;
   color: #333;
 }
 
@@ -37,17 +38,17 @@ body {
 .search input {
   font-size: 16px;
   width: 100%;
-  padding: 10px;
-  padding-left: 40px;
-  border-radius: 20px;
+  padding: 15px;
+  padding-left: 50px;
+  border-radius: 30px;
   outline: none;
   border: none;
   background: #f6f6f6;
 }
 .search img {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
 }
 .contact-list > div {
   margin-bottom: 20px;
@@ -55,6 +56,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .contact-list p {
   font-size: 0.8em;
@@ -84,13 +86,125 @@ body {
 /* chat messages section */
 
 aside {
-  background: #dde;
-  min-height: 100vh;
+  background: #ececfc;
+}
+aside header {
+  background-color: #f6f6f6b0;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 aside .info {
-  background-color: #f6f6f6;
-  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.more span {
+  display: inline-block;
+  background-color: black;
+  width: 5px;
+  height: 5px;
+  margin: 1px;
+  border-radius: 50%;
 }
 aside .messages {
-  backdrop-filter: blur(10px);
+  padding: 30px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 70vh;
+}
+.info p {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+aside .messages div:nth-child(even),
+aside .messages div:nth-child(7),
+aside .messages div:nth-child(9) {
+  align-self: flex-end;
+}
+aside .messages div:nth-child(6),
+aside .messages div:nth-child(8) {
+  align-self: flex-start;
+}
+aside .messages div:nth-child(even),
+aside .messages div:nth-child(7),
+aside .messages div:nth-child(9) {
+  background: linear-gradient(
+    160deg,
+    rgba(128, 0, 128, 0.8),
+    rgba(0, 0, 255, 0.8)
+  );
+  color: white;
+  border-radius: 15px 15px 0 15px;
+}
+aside .messages div:nth-child(even) .time,
+aside .messages div:nth-child(7) .time,
+aside .messages div:nth-child(9) .time {
+  color: white;
+}
+aside .messages div:nth-child(6) .time,
+aside .messages div:nth-child(8) .time {
+  color: #555;
+}
+aside .messages div,
+aside .messages div:nth-child(6),
+aside .messages div:nth-child(8) {
+  padding: 20px;
+  border-radius: 15px 15px 15px 0;
+  background: white;
+  color: #333;
+}
+aside .messages div {
+  width: fit-content;
+  max-width: 60%;
+}
+aside .messages div p:first-child {
+  margin-bottom: 10px;
+}
+.time {
+  font-size: 0.8em;
+  color: #555;
+}
+aside .messages {
+  overflow-y: auto;
+}
+aside .type {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  bottom: 10px;
+  background-color: #eee;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.type input {
+  color: white;
+  padding: 10px;
+  border-radius: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.type img:first-child {
+  transform: rotateZ(45deg);
+}
+.type img:last-child {
+  filter: brightness(0) invert(1);
+  transform: rotateZ(0);
+}
+.type div {
+  padding: 10px;
+  background: linear-gradient(
+    160deg,
+    rgba(128, 0, 128, 0.8),
+    rgba(0, 0, 255, 0.8)
+  );
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
